@@ -1,4 +1,4 @@
-// 将值为 val 的元素直接与数组最后的元素换位置；因此，需要从后往前遍历
+// 思想：将值为 val 的元素直接与数组最后的元素换位置；因此，需要从后往前遍历
 class Solution {
 public:
     int removeElement(vector<int>& nums, int val) {
