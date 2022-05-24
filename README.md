@@ -2,5 +2,5 @@
 ```c++
 fsdf
 ```
-` shell pushu `   
+` shell pushu ` 
 ordinal
