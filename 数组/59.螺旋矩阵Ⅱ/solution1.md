@@ -1,3 +1,5 @@
+![image](https://user-images.githubusercontent.com/83362131/170649274-57f18b16-54b9-4e8c-b7e7-0a0d53c5b8b6.png)
+```cpp
 class Solution {
 public:
     vector<vector<int>> generateMatrix(int n) {
@@ -43,3 +45,4 @@ public:
         return a;
     }
 };
+```
