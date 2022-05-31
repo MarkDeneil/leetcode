@@ -31,7 +31,7 @@ public:
 };
 ```
 
-### 使用三元运算符使代码更简洁
+使用三元运算符使代码更简洁
 ```cpp
 class Solution {
 public:
