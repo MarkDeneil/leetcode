@@ -30,3 +30,22 @@ public:
     }
 };
 ```
+
+### 使用三元运算符使代码更简洁
+```cpp
+class Solution {
+public:
+    vector<int> sortedSquares(vector<int>& nums) {
+        int size = nums.size();
+        vector<int> a(size);
+        int slow = 0;
+        int fast = size - 1;
+        int index = size - 1;
+        while (fast >= slow)
+        {
+            a[index--] = (nums[fast] * nums[fast] >= nums[slow] * nums[slow]) ? nums[fast] * nums[fast--] : nums[slow] * nums[slow++] ;
+        }
+        return a;
+    }
+};
+```
