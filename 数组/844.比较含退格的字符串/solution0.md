@@ -83,3 +83,68 @@ public:
     }
 };
 ```
+尝试双指针法，失败
+```cpp
+class Solution {
+public:
+    
+    bool backspaceCompare(string s, string t) {
+        int sizes = s.size();
+        int sizet = t.size();
+        int count1 = 0; // 记录 s 中的 # 的个数
+        int count2 = 0;
+        int p1 = sizes - 1;
+        int p2 = sizet - 1;
+        while (p1 != -1 && p2 != -1)
+        {
+            if (s[p1] != '#' && t[p2] != '#')
+            {
+                if (s[p1] != t[p2]) return false;
+                --p1;
+                --p2;
+            }
+            else 
+            {
+                if (s[p1] == '#') 
+                {
+                    --p1;
+                    ++count1;
+                }
+                if (t[p2] == '#') 
+                {
+                    --p2;
+                    ++count2;
+                }
+            }
+            while (count1 > 0)
+            {
+                if (s[p1] != '#')
+                {
+                    --p1;
+                    --count1;
+                }
+                else 
+                {
+                    --p1;
+                    ++count1;
+                }
+            }
+            while (count2 > 0)
+            {
+                if (t[p2] != '#')
+                {
+                    --p2;
+                    --count2;
+                }
+                else 
+                {
+                    --p2;
+                    ++count2;
+                }
+            }
+        }
+        if (p1 != -1 || p2 != -1) return false;
+        return true;
+    }
+};
+```
