@@ -1,5 +1,10 @@
-// 滑动窗口
-// 维持一个滑动窗口，当滑动窗口里的数值大于 sum 时，记录下此时的 size，且滑动窗口的前端向后移动一格
+滑动窗口
+维持一个滑动窗口，当滑动窗口里的数值大于 sum 时，记录下此时的 size，且滑动窗口的前端向后移动一格
+实现滑动窗口的过程中，针对于滑动窗口的考虑：
+- 窗口内是什么  
+- 如何移动窗口的起始位置  
+- 如何移动窗口的结束位置
+```cpp
 class Solution {
 public:
     int minSubArrayLen(int target, vector<int>& nums) {
@@ -21,3 +26,5 @@ public:
         return minsize;
     }
 };
+```
+
