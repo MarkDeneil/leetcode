@@ -8,7 +8,7 @@
 class Solution {
 public:
     int minSubArrayLen(int target, vector<int>& nums) {
-        int minsize = 100000;
+        int minsize = 100001;
         int i = 0;
         int sum = 0;
         for (int j = 0; j < nums.size(); j++)
@@ -21,7 +21,7 @@ public:
                 ++i;
             }
         }
-        if (minsize == 100000)
+        if (minsize == 100001)
             return 0;
         return minsize;
     }
