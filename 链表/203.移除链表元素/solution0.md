@@ -4,7 +4,8 @@
 [7,7,7,7],7  
 输出：[]  
 原因：没有在两个 while 循环中判断 `head != nullptr` 导致  
-都只判断了 `p -> next != nullptr`  
+都只判断了 `p -> next != nullptr`    
+因此：不仅要对链表下一个指针判空，还要对当前指针判空  
 ```cpp
 /*
 struct ListNode{
