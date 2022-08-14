@@ -3,7 +3,8 @@
 输出：[]  
 [7,7,7,7],7  
 输出：[]  
-没有在两个 while 循环中判断 `head != nullptr` 导致的  
+原因：没有在两个 while 循环中判断 `head != nullptr` 导致  
+都只判断了 `p -> next != nullptr`  
 ```cpp
 /*
 struct ListNode{
