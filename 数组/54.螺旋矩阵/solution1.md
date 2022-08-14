@@ -49,3 +49,5 @@ public:
     }
 };
 ```
+建议按照 cral 在螺旋矩阵Ⅱ 题解中的遍历顺序，比较简洁：  
+![image](https://user-images.githubusercontent.com/83362131/184521961-3224a126-6ba2-4fb5-b7e2-7c179b1c86ff.png)
