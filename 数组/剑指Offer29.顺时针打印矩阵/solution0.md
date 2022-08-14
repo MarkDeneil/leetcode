@@ -1,6 +1,6 @@
 按照 cral 在螺旋矩阵Ⅱ中的顺序来遍历，会简洁很多;  
 该题目中矩阵边长可以为 0，因此有判空操作：  
-使用 vector 的 empty() 函数判空，返回空的 vector 元素：
+使用 vector 的 `empty()` 函数判空，返回空的 vector 元素：
 `return {};`  
 ```cpp
 class Solution {
