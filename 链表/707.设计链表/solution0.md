@@ -68,7 +68,7 @@ public:
                 MyLinkedList * pre = this;
                 for (int i = 0; i < index; ++i)
                 {
-                    if (p != nullptr)
+                    if (p != nullptr) // 接下来需要对指针 p 进行 p = p -> next; 操作，因此需要对 p 进行判空，否则会可能出现空指针引用错误
                     {
                         pre = p;
                         p = p -> next;
