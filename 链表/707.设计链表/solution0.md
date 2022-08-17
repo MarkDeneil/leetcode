@@ -1,5 +1,5 @@
 设计链表时，要注意链表刚开始的判空操作  
-此外，在使用默认构造函数 `MyLinkedList * p = new MyLinkedList();` 生成链表时，会产生一个 val = 0，next = nullptr 的结点，之后的操作要注意都是在这个结点之后进行的，即之后的操作中生成的链表是不包含这个结点的  
+此外，在使用默认构造函数 `MyLinkedList * p = new MyLinkedList();` 生成链表时，会产生一个 val = 0，next = nullptr 的结点，作为哑结点（虚拟头结点），之后的操作要注意都是在这个结点之后进行的，即之后的操作中生成的链表是不包含这个结点的  
 ```cpp
 class MyLinkedList {
 public:
