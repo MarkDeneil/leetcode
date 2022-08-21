@@ -1,4 +1,4 @@
-设置哑结点 dummy，这样可以不用单独考虑头结点
+设置哑结点 dummy，这样可以不用单独考虑头结点  
 设置 pre, first, second, tmp 结点，first 和 second 结点是需要两两交换的结点，pre 和 tmp 分别是前面的结点和后面的结点  
 ```cpp
 /**
