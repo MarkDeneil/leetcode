@@ -41,3 +41,26 @@ public:
     }
 };
 ```
+暴力解法：   
+```cpp
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
+        if (!headA || !headB) return nullptr;
+        for (ListNode * p = headA; p != nullptr; p = p -> next)
+            for (ListNode * q = headB; q != nullptr; q = q -> next)
+                {
+                    if (p == q) return p;
+                }
+        return nullptr;
+    }
+};
+```
