@@ -4,7 +4,7 @@
 假设 p 和 q 没有相交结点，让 p 和 q 同时走，p -> next == nullptr 时，让其指向 headB，同时 q -> next == nullptr 时，让其指向 headA；  
 再继续走，这样最终 p 和 q 会**同时**指向 nullptr，因此 循环终止条件中还需要有**p 和 q 不同时为 nullptr**  
 最后注意，需要在循环内判定 (p -> next == nullptr && q -> next == nullptr), 这种情况就是第二轮走时没有相交结点的情况，应该退出循环，否则会陷入死循环  
-![2AA9880A9054A0DFF5F861863B8E319F](https://user-images.githubusercontent.com/83362131/186307148-d1cbb29a-d12b-4b0e-b15f-3391fe6614a2.png)
+![3D585C441AA7EEF4A63A2E1C8DD6EF79](https://user-images.githubusercontent.com/83362131/186307557-3a3dd578-4851-4ff7-819d-bb90eac08a7e.png)
 ```cpp
 /**
  * Definition for singly-linked list.
