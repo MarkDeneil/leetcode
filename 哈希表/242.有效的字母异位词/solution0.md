@@ -29,3 +29,29 @@ public:
     }
 };
 ```
+
+使用关联容器 map，将 string 中出现的字符和出现该字符的次数作为一个 pair  
+```
+class Solution {
+public:
+    bool isAnagram(string s, string t) {
+        // 使用 map，将 string 中出现的字符和出现该字符的次数作为一个 pair
+        map<char, int> m1;
+        map<char, int> m2;
+        for (auto x : s)
+        {
+            pair<map<char, int>::iterator, bool> p = m1.insert(make_pair(x, 1)); // 如果 x 已经在 m1 中，则 insert 函数什么也不做，并返回 false
+            if (p.second == false)
+                ++((*(p.first)).second);
+        }
+        for (auto x : t)
+        {
+            pair<map<char, int>::iterator, bool> p = m2.insert(make_pair(x, 1)); // 如果 x 已经在 m1 中，则 insert 函数什么也不做，并返回 false
+            if (p.second == false)
+                ++((*(p.first)).second);
+        }
+        return m1 == m2;
+
+    }
+};
+```
