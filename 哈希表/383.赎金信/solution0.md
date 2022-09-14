@@ -28,7 +28,17 @@ public:
                 if ((*it).second > (*p).second)
                     return false;
         }
-        return true;
+
+        // for (auto x : m1)
+        // {
+        //     map<char, int>::iterator p;
+        //     if ((p = m2.find(x.first)) == m2.end())
+        //         return false;
+        //     else
+        //         if (x.second > (*p).second)
+        //             return false;
+        // }
+        // return true;
         
     }
 };
