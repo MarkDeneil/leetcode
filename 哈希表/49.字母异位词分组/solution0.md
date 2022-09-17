@@ -59,3 +59,59 @@ public:
     }
 };
 ```
+使用 array 代替 map，仍然超时 111/117 测试用例
+```cpp
+class Solution {
+public:
+    vector<vector<string>> groupAnagrams(vector<string>& strs) {
+        vector<array<int, 26>> vec;
+        for (string s : strs)
+        {
+            array<int, 26> arr;
+            for (int i = 0; i < 26; ++i)
+                arr[i] = 0;
+            for (auto x : s)
+            {
+                ++arr[int(x) - 97];
+            }
+            vec.push_back(arr);
+        }
+
+        vector<vector<string>> res;
+
+        while (!vec.empty())
+        {
+            vector<string> tempstr;
+            vector<string>::iterator it = strs.begin();
+            vector<array<int, 26>>::iterator it1 = vec.begin();
+
+            tempstr.push_back(*it);
+            strs.erase(it);
+
+            array<int, 26> temparr; // 注意，数组不能直接赋值，必须逐元素赋值
+            for (int i = 0; i < 26; ++i)
+            {
+                temparr[i] = (*it1)[i];
+            }
+            vec.erase(it1);
+
+            for (it1 = vec.begin(), it = strs.begin(); it1 != vec.end(); )
+            {
+                if (*it1 == temparr)
+                {
+                    tempstr.push_back(*it);
+                    it1 = vec.erase(it1);
+                    it = strs.erase(it);
+                    continue;
+                }
+                ++it;
+                ++it1;
+            }
+            res.push_back(tempstr);
+        }
+        
+        return res;
+
+    }
+};
+```
