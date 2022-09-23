@@ -14,6 +14,7 @@ public:
         return vector<int>(s.begin(), s.end());
     }
 };
+```
 
 使用 lambda 表达式  
 ```cpp
