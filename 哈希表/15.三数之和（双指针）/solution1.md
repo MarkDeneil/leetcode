@@ -1,5 +1,5 @@
-双指针法：
-![15 三数之和](https://user-images.githubusercontent.com/83362131/195069910-e5471d3c-3b7c-4e1c-abe6-3f5dc95c25f1.gif)
+双指针法：  
+![15 三数之和](https://user-images.githubusercontent.com/83362131/195069910-e5471d3c-3b7c-4e1c-abe6-3f5dc95c25f1.gif)  
 首先将 nums 数组排序，然后在下标 0 出 定义指针 i，在 i + 1 处定义 left，在末尾处定义 right；  
 如果nums\[i] + nums\[left] + nums\[right] > 0 就说明 此时三数之和大了，因为数组是排序后了，所以right下标就应该向左移动，这样才能让三数之和小一些。  
 如果 nums\[i] + nums\[left] + nums\[right] < 0 说明 此时 三数之和小了，left 就向右移动，才能让三数之和大一些，直到left与right相遇为止。  
