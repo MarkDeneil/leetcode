@@ -1,3 +1,4 @@
+pop 函数比 solution0 简单  
 ```cpp
 class MyQueue {
 private:
