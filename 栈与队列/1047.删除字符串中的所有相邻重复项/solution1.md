@@ -1,4 +1,6 @@
 利用栈  
+![1047 删除字符串中的所有相邻重复项](https://user-images.githubusercontent.com/83362131/196985345-1674c036-24c4-4357-9b6f-da01f8df6f45.gif)  
+
 ```cpp
 class Solution {
 public:
