@@ -1,6 +1,7 @@
 逆波兰表达式求值过程：遍历该逆波兰表达式，遇到数字则入栈；遇到算符则取出栈顶两个数字进行计算，并将结果压入栈中。  
-![150 逆波兰表达式求值-1](https://user-images.githubusercontent.com/83362131/197346192-180a4507-9f8f-4e76-a456-99db81b584ec.gif)
-要注意的是，int 有可能表示不了某些结果，因此用 long long 
+![150 逆波兰表达式求值-1](https://user-images.githubusercontent.com/83362131/197346192-180a4507-9f8f-4e76-a456-99db81b584ec.gif)  
+要注意的是，int 有可能表示不了某些结果，因此用 long long  
+注意，该题目并不是 求一个表达式的逆波兰表达式 的算法  
 ```cpp
 class Solution {
 public:
