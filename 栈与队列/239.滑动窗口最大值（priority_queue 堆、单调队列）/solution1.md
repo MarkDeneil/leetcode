@@ -28,7 +28,7 @@ public:
 pop(value)：如果窗口移除的元素value等于单调队列的出口元素，那么队列弹出元素，否则不用任何操作  
 push(value)：如果push的元素value大于入口元素的数值，那么就将队列入口的元素弹出，直到push元素的数值小于等于队列入口元素的数值为止  
 ![239 滑动窗口最大值-2](https://user-images.githubusercontent.com/83362131/198886917-9f79c6da-a462-42c1-841c-741a29f0a561.gif)  
-```
+```cpp
 class Solution {
 public:
     vector<int> maxSlidingWindow(vector<int>& nums, int k) {
