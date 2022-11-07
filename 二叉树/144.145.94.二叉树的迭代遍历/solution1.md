@@ -1,5 +1,5 @@
 中序遍历的迭代遍历比较麻烦：  
-![3](https://user-images.githubusercontent.com/83362131/200217997-80bbd0d2-dc4c-4708-bb87-c24d42fd6ab7.png)  
+具体见官方题解。  
 ```cpp
 class Solution {
 public:
