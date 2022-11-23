@@ -21,7 +21,7 @@ public:
     }
 };
 ```
-前序遍历的迭代和后续遍历的迭代类似：  
+前序遍历迭代较简单：  
 ```cpp
 /**
  * Definition for a binary tree node.
@@ -52,6 +52,8 @@ public:
     }
 };
 ```
+后序遍历迭代思想：
+![393A631D843B09930F368042335AD548](https://user-images.githubusercontent.com/83362131/203576431-0070fda7-980a-457a-813b-80eab92b62ab.png)  
 ```cpp
 /**
  * Definition for a binary tree node.
