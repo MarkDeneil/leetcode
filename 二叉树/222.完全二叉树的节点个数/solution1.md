@@ -32,10 +32,10 @@ int count(TreeNode * t) {
         ++depthr;
         r = r -> right;
     }
-    if (depthr == depthl) {
+    if (depthr == depthl) { // 说明是满二叉树，可以直接按照公式计算
         return pow(2, depthl + 1) - 1;
     }
-    return count(t -> left) + count(t -> right) + 1;
+    return count(t -> left) + count(t -> right) + 1; // 说明不是满二叉树，不能按照公式计算
 }
 
 class Solution {
