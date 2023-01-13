@@ -34,6 +34,7 @@ public:
 已经选择的元素个数：path.size();  
 还需要的元素个数为: k - path.size();  
 在集合n中至多要从该起始位置 : n - (k - path.size()) + 1，开始遍历  
+![20210130194335207](https://user-images.githubusercontent.com/83362131/212289326-5c0e1afc-8bf2-4684-8af8-83a189bbd9b3.png)
 代码如下：  
 ```cpp
 void backtracking(int n, int k, int startIndex, vector<vector<int>> & res, vector<int> & tempres) {
