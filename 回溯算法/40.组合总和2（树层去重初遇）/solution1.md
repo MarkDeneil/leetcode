@@ -36,7 +36,7 @@ void backtracking(vector<int> & candidates, int target, vector<int> & tmpres, ve
             if (candidates[i] == candidates[i - 1])
                 continue;
         tmpres.push_back(candidates[i]);
-        backtracking(candidates, target, tmpres, res, i + 1);
+        backtracking(candidates, target, tmpres, res, i + 1); // 集合中的每个数只能使用一次，因此是 i + 1
         tmpres.pop_back();
     }
 }
