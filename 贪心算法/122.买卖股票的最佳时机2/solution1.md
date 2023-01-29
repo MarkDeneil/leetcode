@@ -1,4 +1,5 @@
 解法1.可以按照 376.摆动序列 的方法类似来处理，这样可以得到每一段的区间  
+![image](https://user-images.githubusercontent.com/83362131/215324677-31b90dfe-e765-4faa-b190-47e85c52c06b.png)  
 ```cpp
 class Solution {
 public:
