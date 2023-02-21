@@ -5,7 +5,7 @@
 1）若 j < nums[i]，则 dp[i][j] = dp[i-1][j]  
 2）若 j >= nums[i] ，则 背包容量为 j 的背包可以装得下 nums[i]  
    - 可以选择装或者不装，如果装的话，有 dp[i-1][j-nums[i]] 种方法把背包装满；如果不装的话，有 dp[i-1][j] 种方法把背包装满  
-   - 因此，一共有 dp[i-1][j-nums[i]] + dp[i-1][j] 种方法把容量为 j 的背包装满  
+   - 因此，一共有 dp[i-1][j-nums[i]] + dp[i-1][j] 种方法把容量为 j 的背包装满   
 写成一维数组，即 **dp[j] = dp[j-nums[i]] + dp[j]**，且当 j < nums[i] 时，dp[j] 不需要变动，因此只需要考虑 j > nums[i] 的情况即可（这一点和背包理论讲解类似）  
 ```cpp
 class Solution {
