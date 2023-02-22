@@ -3,13 +3,13 @@
 ```cpp
 // 先遍历物品，再遍历背包容量
 for(int i = 0; i < weight.size(); i++) { // 遍历物品
-    for(int j = weight[i]; j <= bagWeight ; j++) { // 遍历背包容量
+    for(int j = weight[i]; j <= bagWeight ; j++) { // 遍历背包容量，正序遍历
         dp[j] = max(dp[j], dp[j - weight[i]] + value[i]);
 
     }
 }
 ```
-即下图中容量 j 正序遍历的情况：  
+即下图中容量 j 正序遍历的情况，当 j 等于 2 时，物品 0 被重复放入两次：  
 ![IMG_0381(20230222-231807)](https://user-images.githubusercontent.com/83362131/220674493-2d352f25-7c4b-4c13-af1c-49525b73c8a5.PNG)
 ![20210126104510106](https://user-images.githubusercontent.com/83362131/220674525-c7ffd369-d206-430d-b7eb-87afa25aec35.jpg)
 
