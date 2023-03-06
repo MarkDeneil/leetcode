@@ -1,5 +1,5 @@
 dp[i] 表示 i 之前（包括 i）的以 nums[i] 结尾的最长递增子序列的长度  
-思考之后发现，dp[i] 不仅仅与 dp[i-1] 有关；应该遍历所有的 dp[0] ~ dp[i-1]，如果 nums[i] 大于 nums[0] ~ nums[i-1]中的一个，那么就有可能更新 dp[i]  
+思考之后发现，**dp[i] 不仅仅与 dp[i-1] 有关；应该遍历所有的 dp[0] ~ dp[i-1]，如果 nums[i] 大于 nums[0] ~ nums[i-1]中的一个，那么就有可能更新 dp[i]**  
 ```cpp
 
 class Solution {
