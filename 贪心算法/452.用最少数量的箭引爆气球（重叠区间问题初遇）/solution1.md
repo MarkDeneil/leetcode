@@ -40,7 +40,7 @@ public:
         sort(points.begin(), points.end(), sortpoints);
         int res = 1;
         int r = points[0][1]; // 记录最左边重叠区间的最小右边界
-        for (int i = 0; i < points.size(); ++i) {
+        for (int i = 0; i < points.size(); ++i) { // 最重要的点，不一定要真的去掉 vector 中的元素，而只是遍历一遍
             if (points[i][0] > r) {
                 ++res;
                 r = points[i][1];
