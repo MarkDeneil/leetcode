@@ -28,3 +28,25 @@ public:
     }
 };
 ```
+```cpp
+bool sortpoints(const vector<int> & v1, const vector<int> & v2) { // 按照最小右边界排序
+    if (v1[1] == v2[1])
+        return v1[0] < v2[0];
+    return v1[1] < v2[1];
+} 
+class Solution {
+public:
+    int findMinArrowShots(vector<vector<int>>& points) {
+        sort(points.begin(), points.end(), sortpoints);
+        int res = 1;
+        int r = points[0][1]; // 记录最左边重叠区间的最小右边界
+        for (int i = 0; i < points.size(); ++i) {
+            if (points[i][0] > r) {
+                ++res;
+                r = points[i][1];
+            }
+        }
+        return res;
+    }
+};
+```
